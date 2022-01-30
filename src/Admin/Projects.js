@@ -61,13 +61,12 @@ const Projects = () => {
     }
   }, []);
 
-  let opt = options.map((option) => (
-    <MenuItem key={option} id={"d" + pr.id} onClick={handleClose}>
-      {option}
-    </MenuItem>
-  ));
-
   var render_projects = project_data.map((pr) => {
+    let opt = options.map((option) => (
+      <MenuItem key={option} id={"d" + pr.id} onClick={handleClose}>
+        {option}
+      </MenuItem>
+    ));
     return (
       <Accordion
         key={pr.id}
